@@ -26,7 +26,7 @@ a:focus, input:focus, textarea:focus, button:focus, .btn:focus, .btn.focus, .btn
 
 a:hover {
     transition: all .3s ease-out 0s;
-    color: #e44e83
+    color: #004D73
 }
 
 a, a:focus, a:hover {
@@ -114,11 +114,11 @@ p {
 }
 
 .theme-color {
-    color: #e44e83
+    color: #004D73
 }
 
 .error {
-    color: crimson
+    color: #9E3309
 }
 
 .success {
@@ -144,30 +144,30 @@ p {
 }
 
 .theme-btn:hover, .theme-btn:focus {
-    background: #e44e83;
+    background: #004D73;
     color: #fff
 }
 
 .gradient-1 {
-    background-image: linear-gradient(#6240c8 0%, #a145fe 100%)
+    background-image: linear-gradient(#004D73 0%, #2A88AB 100%)
 }
 
 .gradient-2 {
-    background-image: linear-gradient(#b548f2 0%, #d283fd 100%)
+    background-image: linear-gradient(#004D73 0%, #2A88AB 100%)
 }
 
 .gradient-3 {
-    background-image: linear-gradient(#e44e83 0%, #ffb8d1 100%)
+    background-image: linear-gradient(#004D73 0%, #2A88AB 100%)
 }
 
 .gradient-4 {
-    background-image: linear-gradient(#40b4f6 0%, #79cefd 100%)
+    background-image: linear-gradient(#004D73 0%, #2A88AB 100%)
 }
 
 .scroll-top {
     width: 45px;
     height: 45px;
-    background: #e44e83;
+    background: #004D73;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -183,7 +183,7 @@ p {
 }
 
 .scroll-top:hover {
-    background: rgba(228, 78, 131, .8);
+    background: #2A88AB;
     color: #fff
 }
 
@@ -203,7 +203,7 @@ p {
     font-size: 25px;
     font-weight: 600;
     display: block;
-    color: #e44e83;
+    color: #004D73;
     margin-bottom: 12px
 }
 
@@ -277,7 +277,7 @@ p {
     width: 200%;
     height: 100%;
     border-style: solid;
-    border-color: #e44e83 #e44e83 #ddd;
+    border-color: #004D73 #004D73 #ddd;
     border-radius: 50%;
     border-width: 6px
 }
@@ -1235,7 +1235,7 @@ p {
 }
 
 .navbar-nav .nav-item a.active, .navbar-nav .nav-item a:hover {
-    color: #e44e83
+    color: #004D73
 }
 
 .navbar-nav .nav-item:hover .sub-menu {
@@ -1302,7 +1302,7 @@ p {
 
 .navbar-nav .nav-item .sub-menu li a.active, .navbar-nav .nav-item .sub-menu li a:hover {
     padding-left: 25px;
-    color: #e44e83
+    color: #004D73
 }
 
 .navbar-nav .sub-nav-toggler {
@@ -1571,7 +1571,7 @@ p {
 .faq-item .faq-header .faq-btn::after {
     content: '';
     position: absolute;
-    border-top: 6px solid #e44e83;
+    border-top: 6px solid #004D73;
     border-left: 6px solid transparent;
     border-right: 6px solid transparent;
     right: 25px;
@@ -1731,7 +1731,7 @@ p {
     width: 211px;
     height: 211px;
     border-radius: 50%;
-    background: linear-gradient(#b548f2 0%, #d283fd 100%)
+    background: linear-gradient(#004D73 0%, #55BBD5 100%)
 }
 
 .counterup-section .counter-wrapper::before {
@@ -1794,7 +1794,7 @@ p {
     width: 100%;
     height: 0;
     display: flex;
-    background: #e44e83;
+    background: #004D73;
     justify-content: center;
     align-items: center;
     opacity: 0;
@@ -1875,7 +1875,7 @@ p {
 
 .testimonial-section .single-testimonial .testimonial-info-wrapper .rating {
     padding-right: 40px;
-    color: #e44e83
+    color: #004D73
 }
 
 .testimonial-section .single-testimonial .testimonial-info-wrapper .rating i {
@@ -1917,7 +1917,7 @@ p {
 }
 
 .testimonial-section .testimonial-active-wrapper .tns-nav button.tns-nav-active {
-    background: #e44e83
+    background: #004D73
 }
 
 .faq-section {
@@ -2043,7 +2043,7 @@ p {
     width: 100%;
     height: 100%;
     border-radius: 30px;
-    background: linear-gradient(#6240c8 0%, #a145fe 100%);
+    background: linear-gradient(#002C52 0%, #004D73 100%);
     opacity: .54;
     left: 0;
     top: 0;
@@ -2062,7 +2062,7 @@ p {
     height: 60px;
     background: #fff;
     line-height: 62px;
-    color: #e44e83;
+    color: #004D73;
     text-align: center;
     border-radius: 50%;
     position: relative
@@ -2084,7 +2084,7 @@ p {
 
 .subscribe-section .subscribe-wrapper {
     border-radius: 30px;
-    background: linear-gradient(to right bottom, #6240c8 0%, #a145fe 100%);
+    background: linear-gradient(to right bottom, #002C52 0%, #55BBD5 100%);
     position: relative;
     overflow: hidden;
     z-index: 1
@@ -2177,7 +2177,7 @@ p {
 }
 
 .subscribe-section .subscribe-wrapper .subscribe-form button {
-    color: #e44e83;
+    color: #004D73;
     margin-bottom: 20px
 }
 
@@ -2225,7 +2225,7 @@ p {
 
 .footer .footer-links .footer-social-links ul li a:hover {
     color: #fff;
-    background: #e44e83
+    background: #004D73
 }
 
 .footer .footer-links .footer-menu {
@@ -2246,7 +2246,7 @@ p {
 }
 
 .footer .footer-links .footer-menu ul li a:hover {
-    color: #e44e83
+    color: #004D73
 }
 
 .footer .copyright-area {
