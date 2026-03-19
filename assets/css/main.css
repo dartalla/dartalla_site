@@ -2226,6 +2226,11 @@ p {
     margin-bottom: 30px
 }
 
+.footer .footer-links .logo img {
+    height: 44px;
+    width: auto
+}
+
 .footer .footer-links .footer-social-links {
     margin-bottom: 30px
 }
