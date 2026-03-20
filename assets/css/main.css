@@ -241,7 +241,8 @@ p {
     height: 100%;
     width: 100%;
     background: #fff;
-    z-index: 99999
+    z-index: 99999;
+    transition: opacity .3s ease
 }
 
 .preloader .loader {
@@ -2286,4 +2287,299 @@ p {
 
 .footer .copyright-area p {
     font-size: 16px
+}
+
+@media (max-width: 767px) {
+    .navbar-area {
+        top: 15px
+    }
+
+    .navbar {
+        padding: 14px 18px
+    }
+
+    .navbar-brand img {
+        max-width: 128px
+    }
+
+    .navbar-collapse {
+        border-radius: 12px;
+        margin-top: 10px
+    }
+
+    .navbar-nav .nav-item a {
+        padding: 10px 0
+    }
+
+    .hero-section {
+        padding-top: 150px;
+        padding-bottom: 110px
+    }
+
+    .hero-section .hero-content-wrapper {
+        text-align: left
+    }
+
+    .hero-section .hero-content-wrapper h1 {
+        font-size: 34px;
+        line-height: 42px
+    }
+
+    .hero-section .hero-content-wrapper p {
+        padding-right: 0;
+        font-size: 17px
+    }
+
+    .hero-section .hero-content-wrapper .theme-btn,
+    .hero-section .hero-content-wrapper > a:not(.theme-btn) {
+        display: block !important;
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0 !important;
+        margin-right: 0;
+        text-align: center
+    }
+
+    .hero-section .hero-content-wrapper > a:not(.theme-btn) {
+        margin-top: 14px;
+        padding: 15px 24px;
+        border: 1px solid rgba(255, 255, 255, .28);
+        border-radius: 999px
+    }
+
+    .hero-section .hero-img {
+        margin-top: 10px
+    }
+
+    .section-title span {
+        font-size: 18px
+    }
+
+    .section-title h2 {
+        font-size: 30px;
+        line-height: 38px
+    }
+
+    .section-title p {
+        font-size: 16px
+    }
+
+    .service-section .single-service,
+    .single-blog,
+    .testimonial-section .single-testimonial {
+        width: 100%;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto
+    }
+
+    .hero-section,
+    .why-use-section,
+    .process-section,
+    .counterup-section,
+    .testimonial-section,
+    .faq-section,
+    .blog-section,
+    .video-section,
+    .subscribe-section,
+    .footer {
+        overflow-x: clip
+    }
+
+    .counterup-section .container .counter-shape-1,
+    .counterup-section .container .counter-shape-2,
+    .testimonial-section .container .shape,
+    .video-section .video-wrapper .shape,
+    .footer .footer-bg {
+        display: none
+    }
+
+    .counterup-section .counter-wrapper::before,
+    .counterup-section .counter-wrapper::after {
+        width: 140px;
+        height: 140px
+    }
+
+    .counterup-section .counter-wrapper::before {
+        left: -85px;
+        bottom: -85px
+    }
+
+    .counterup-section .counter-wrapper::after {
+        right: -85px;
+        top: -85px
+    }
+
+    .faq-item .faq-header .faq-btn {
+        padding: 18px 46px 18px 18px
+    }
+
+    .faq-item .faq-header .faq-btn span {
+        padding-top: 4px;
+        line-height: 1.35
+    }
+
+    .counterup-section .counter-wrapper {
+        padding-top: 10px;
+        padding-bottom: 10px
+    }
+
+    .counterup-section .counter-wrapper .single-counter {
+        padding-left: 10px;
+        padding-right: 10px
+    }
+
+    .counterup-section .counter-wrapper .single-counter h3 {
+        font-size: 24px;
+        line-height: 1.3
+    }
+
+    .counterup-section .counter-wrapper .single-counter p {
+        font-size: 17px;
+        line-height: 1.5
+    }
+
+    .testimonial-section .single-testimonial {
+        padding: 24px
+    }
+
+    .testimonial-section .single-testimonial .testimonial-info-wrapper .testimonial-info {
+        align-items: flex-start;
+        min-width: 0
+    }
+
+    .testimonial-section .single-testimonial .testimonial-info-wrapper .testimonial-info .testimonial-meta {
+        min-width: 0
+    }
+
+    .testimonial-section .single-testimonial .testimonial-info-wrapper .testimonial-info .testimonial-meta h5,
+    .testimonial-section .single-testimonial .testimonial-info-wrapper .testimonial-info .testimonial-meta span {
+        word-break: break-word
+    }
+
+    .single-blog .blog-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px
+    }
+
+    .single-blog .blog-meta .blog-author,
+    .single-blog .blog-meta .blog-comment {
+        min-width: 0
+    }
+
+    .single-blog .blog-meta .blog-author span,
+    .single-blog .blog-meta .blog-comment span {
+        word-break: break-word
+    }
+
+    .single-blog .blog-meta .blog-comment {
+        display: flex
+    }
+
+    .single-blog .blog-title h4 {
+        font-size: 22px;
+        line-height: 1.4
+    }
+
+    .video-section .video-wrapper .video-thumb .video-btn a {
+        width: 54px;
+        height: 54px;
+        line-height: 56px
+    }
+
+    .subscribe-section .subscribe-wrapper {
+        border-radius: 22px;
+        padding-left: 22px;
+        padding-right: 22px;
+        margin-left: 0;
+        margin-right: 0
+    }
+
+    .subscribe-section .subscribe-wrapper .subscribe-form input {
+        width: 100%;
+        margin-right: 0;
+        height: 58px;
+        padding: 0 22px
+    }
+
+    .subscribe-section .subscribe-wrapper .subscribe-form button {
+        width: 100%;
+        max-width: 100%
+    }
+
+    .footer {
+        padding-top: 110px
+    }
+
+    .footer .footer-links .logo img {
+        height: 36px
+    }
+
+    .footer .footer-links .footer-social-links ul li a {
+        margin: 0 5px
+    }
+
+    .footer .footer-links .footer-menu {
+        padding: 10px 8px
+    }
+
+    .footer .footer-links .footer-menu ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 0
+    }
+
+    .footer .footer-links .footer-menu ul li a {
+        padding: 10px 12px;
+        font-size: 15px
+    }
+
+    .footer .copyright-area p {
+        font-size: 14px;
+        line-height: 1.6
+    }
+
+    .whatsapp-float {
+        width: 52px;
+        height: 52px;
+        font-size: 26px;
+        right: 16px;
+        bottom: 82px
+    }
+
+    .scroll-top {
+        right: 16px;
+        bottom: 20px
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .counterup-section .container .counter-shape-1,
+    .counterup-section .container .counter-shape-2,
+    .testimonial-section .container .shape,
+    .video-section .video-wrapper .shape {
+        display: none
+    }
+
+    .hero-section .hero-content-wrapper p {
+        padding-right: 0
+    }
+
+    .hero-section .hero-content-wrapper > a:not(.theme-btn) {
+        margin-left: 16px !important
+    }
+
+    .single-blog .blog-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px
+    }
+
+    .footer .footer-links .footer-menu ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center
+    }
 }
