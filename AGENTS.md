@@ -14,3 +14,13 @@
 - On small screens, Bootstrap row gutters must fit container padding. Check document scroll width, not only individual card bounds.
 - Screenshot fixtures must intercept every API request locally and never forward authentication or cookies to a real service. Inspect endpoint response shapes before capture; keep transaction payment states consistent with dashboard totals. Record UI provenance and distinguish rendered mock data from backend verification.
 - Before committing, check the staged diff with `git diff --cached --check`; the unstaged check does not cover newly added files.
+- Content cleanup must preserve the existing visual composition, decorative artwork and motion. Replace fictitious product evidence without removing unrelated design assets or interactions; redesign requires an explicit request. Motion must respect reduced-motion preferences and keep content readable when JavaScript is unavailable.
+- Mobile navigation must stay above page content in both initial and sticky states, with an opaque background during opening and closing. Verify overlap and link hit targets; a high z-index alone does not fix transparent backgrounds.
+
+- Animation libraries must release inline opacity/transform after completion so CSS hover and floating effects remain effective. Anchor scrolling must use one header offset; do not add a second offset on top of CSS scroll-padding.
+
+- Keep manual wheel, trackpad and touch scrolling native and responsive. Apply Lenis smoothing only to programmatic anchor navigation; do not add manual scroll inertia without an explicit request.
+
+- Above-the-fold title and product evidence must remain fully visible during entrance motion; keep fades below the fold and use the smallest library build needed. Screenshot enhancement must preserve original links without JavaScript and provide keyboard closing, focus return and contained zoom scrolling.
+
+- Normalize vendored text licenses to LF while preserving their wording and copyright notices; include newly added vendor files in the staged whitespace check.

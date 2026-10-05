@@ -35,9 +35,12 @@
       crossorigin
     />
     <link rel="stylesheet" href="assets/css/bootstrap.min.css?v=5.3.8.1" />
-    <link rel="stylesheet" href="assets/css/main.css?v=20261004.6" />
+    <link rel="stylesheet" href="assets/css/main.css?v=20261005.9" />
     <script src="assets/js/bootstrap-collapse.min.js?v=5.3.8" defer></script>
-    <script src="assets/js/main.js?v=20261004.6" defer></script>
+    <link rel="stylesheet" href="assets/vendor/lenis-1.3.26/lenis.css" />
+    <script src="assets/vendor/motion-14.0.0/motion-mini.js" defer></script>
+    <script src="assets/vendor/lenis-1.3.26/lenis.min.js" defer></script>
+    <script src="assets/js/main.js?v=20261005.9" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Pular para o conteúdo</a>
@@ -138,6 +141,14 @@
             </div>
             <div class="col-lg-5">
               <figure class="hero-capture">
+                <img
+                  class="hero-design-shape decoration"
+                  src="assets/img/hero/hero-shape.svg"
+                  width="201"
+                  height="160"
+                  alt=""
+                  aria-hidden="true"
+                />
                 <a
                   class="capture-link"
                   href="assets/img/product/overview-1600.webp"
@@ -236,141 +247,183 @@
               Explore os detalhes ampliando cada imagem.
             </p>
           </div>
-          <article class="product-shot">
-            <div class="shot-heading">
-              <h3>Cada movimento, com contexto</h3>
-              <p>
-                Acompanhe receitas e despesas por conta, categoria e data, com a
-                identificação dos lançamentos realizados e pendentes.
-              </p>
-            </div>
-            <figure>
-              <a
-                class="capture-link"
-                href="assets/img/product/transactions-1600.webp"
-                target="_blank"
-                rel="noopener"
-                aria-label="Ampliar captura: Tela de transações do Dartalla One com receitas e despesas demonstrativas (abre em nova aba)"
+          <div
+            class="product-carousel"
+            role="region"
+            aria-roledescription="carrossel"
+            aria-label="Telas reais do Dartalla One"
+          >
+            <div class="carousel-controls" hidden>
+              <button
+                class="carousel-button"
+                type="button"
+                data-carousel-prev
+                aria-label="Tela anterior"
+                aria-controls="product-track"
               >
-                <img
-                  src="assets/img/product/transactions-960.webp"
-                  srcset="
-                    assets/img/product/transactions-640.webp   640w,
-                    assets/img/product/transactions-960.webp   960w,
-                    assets/img/product/transactions-1600.webp 1600w
-                  "
-                  sizes="(min-width: 992px) 1100px, calc(100vw - 42px)"
-                  width="1600"
-                  height="1000"
-                  alt="Tela de transações do Dartalla One com receitas e despesas demonstrativas"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </a>
-              <figcaption>
-                <span>Ambiente de demonstração — dados demonstrativos</span
-                ><a
-                  class="text-link"
-                  href="assets/img/product/transactions-1600.webp"
-                  target="_blank"
-                  rel="noopener"
-                  aria-label="Ampliar captura de cada movimento, com contexto (abre em nova aba)"
-                  >Ampliar captura <span aria-hidden="true">↗</span></a
-                >
-              </figcaption>
-            </figure>
-          </article>
-          <article class="product-shot">
-            <div class="shot-heading">
-              <h3>Documentos fiscais organizados</h3>
-              <p>
-                Visualize os documentos e seus status. Nesta captura, todas as
-                NF-e são rascunhos demonstrativos, sem emissão.
+                ←
+              </button>
+              <p class="carousel-status" aria-live="polite" aria-atomic="true">
+                Transações · 1 de 3
               </p>
-            </div>
-            <figure>
-              <a
-                class="capture-link"
-                href="assets/img/product/fiscal-1600.webp"
-                target="_blank"
-                rel="noopener"
-                aria-label="Ampliar captura: Lista de NF-e do Dartalla One com quatro rascunhos demonstrativos (abre em nova aba)"
+              <button
+                class="carousel-button"
+                type="button"
+                data-carousel-next
+                aria-label="Próxima tela"
+                aria-controls="product-track"
               >
-                <img
-                  src="assets/img/product/fiscal-960.webp"
-                  srcset="
-                    assets/img/product/fiscal-640.webp   640w,
-                    assets/img/product/fiscal-960.webp   960w,
-                    assets/img/product/fiscal-1600.webp 1600w
-                  "
-                  sizes="(min-width: 992px) 1100px, calc(100vw - 42px)"
-                  width="1600"
-                  height="1000"
-                  alt="Lista de NF-e do Dartalla One com quatro rascunhos demonstrativos"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </a>
-              <figcaption>
-                <span>Ambiente de demonstração — dados demonstrativos</span
-                ><a
-                  class="text-link"
-                  href="assets/img/product/fiscal-1600.webp"
-                  target="_blank"
-                  rel="noopener"
-                  aria-label="Ampliar captura de documentos fiscais organizados (abre em nova aba)"
-                  >Ampliar captura <span aria-hidden="true">↗</span></a
-                >
-              </figcaption>
-            </figure>
-          </article>
-          <article class="product-shot">
-            <div class="shot-heading">
-              <h3>Clientes na mesma rotina de gestão</h3>
-              <p>
-                Consulte o cadastro de clientes em uma lista com busca e acesso
-                aos registros. Os nomes e contatos apresentados são fictícios.
-              </p>
+                →
+              </button>
             </div>
-            <figure>
-              <a
-                class="capture-link"
-                href="assets/img/product/customers-1600.webp"
-                target="_blank"
-                rel="noopener"
-                aria-label="Ampliar captura: Cadastro de clientes do Dartalla One com seis empresas fictícias (abre em nova aba)"
-              >
-                <img
-                  src="assets/img/product/customers-960.webp"
-                  srcset="
-                    assets/img/product/customers-640.webp   640w,
-                    assets/img/product/customers-960.webp   960w,
-                    assets/img/product/customers-1600.webp 1600w
-                  "
-                  sizes="(min-width: 992px) 1100px, calc(100vw - 42px)"
-                  width="1600"
-                  height="1000"
-                  alt="Cadastro de clientes do Dartalla One com seis empresas fictícias"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </a>
-              <figcaption>
-                <span>Ambiente de demonstração — dados demonstrativos</span
-                ><a
-                  class="text-link"
-                  href="assets/img/product/customers-1600.webp"
-                  target="_blank"
-                  rel="noopener"
-                  aria-label="Ampliar captura de clientes na mesma rotina de gestão (abre em nova aba)"
-                  >Ampliar captura <span aria-hidden="true">↗</span></a
-                >
-              </figcaption>
-            </figure>
-          </article>
+            <div id="product-track" class="product-track">
+              <article class="product-shot">
+                <div class="shot-heading">
+                  <h3>Cada movimento, com contexto</h3>
+                  <p>
+                    Acompanhe receitas e despesas por conta, categoria e data,
+                    com a identificação dos lançamentos realizados e pendentes.
+                  </p>
+                </div>
+                <figure>
+                  <a
+                    class="capture-link"
+                    href="assets/img/product/transactions-1600.webp"
+                    target="_blank"
+                    rel="noopener"
+                    aria-label="Ampliar captura: Tela de transações do Dartalla One com receitas e despesas demonstrativas (abre em nova aba)"
+                  >
+                    <img
+                      src="assets/img/product/transactions-960.webp"
+                      srcset="
+                        assets/img/product/transactions-640.webp   640w,
+                        assets/img/product/transactions-960.webp   960w,
+                        assets/img/product/transactions-1600.webp 1600w
+                      "
+                      sizes="(min-width: 992px) 1100px, calc(100vw - 42px)"
+                      width="1600"
+                      height="1000"
+                      alt="Tela de transações do Dartalla One com receitas e despesas demonstrativas"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </a>
+                  <figcaption>
+                    <span>Ambiente de demonstração — dados demonstrativos</span
+                    ><a
+                      class="text-link"
+                      href="assets/img/product/transactions-1600.webp"
+                      target="_blank"
+                      rel="noopener"
+                      aria-label="Ampliar captura de cada movimento, com contexto (abre em nova aba)"
+                      >Ampliar captura <span aria-hidden="true">↗</span></a
+                    >
+                  </figcaption>
+                </figure>
+              </article>
+              <article class="product-shot">
+                <div class="shot-heading">
+                  <h3>Documentos fiscais organizados</h3>
+                  <p>
+                    Visualize os documentos e seus status. Nesta captura, todas
+                    as NF-e são rascunhos demonstrativos, sem emissão.
+                  </p>
+                </div>
+                <figure>
+                  <a
+                    class="capture-link"
+                    href="assets/img/product/fiscal-1600.webp"
+                    target="_blank"
+                    rel="noopener"
+                    aria-label="Ampliar captura: Lista de NF-e do Dartalla One com quatro rascunhos demonstrativos (abre em nova aba)"
+                  >
+                    <img
+                      src="assets/img/product/fiscal-960.webp"
+                      srcset="
+                        assets/img/product/fiscal-640.webp   640w,
+                        assets/img/product/fiscal-960.webp   960w,
+                        assets/img/product/fiscal-1600.webp 1600w
+                      "
+                      sizes="(min-width: 992px) 1100px, calc(100vw - 42px)"
+                      width="1600"
+                      height="1000"
+                      alt="Lista de NF-e do Dartalla One com quatro rascunhos demonstrativos"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </a>
+                  <figcaption>
+                    <span>Ambiente de demonstração — dados demonstrativos</span
+                    ><a
+                      class="text-link"
+                      href="assets/img/product/fiscal-1600.webp"
+                      target="_blank"
+                      rel="noopener"
+                      aria-label="Ampliar captura de documentos fiscais organizados (abre em nova aba)"
+                      >Ampliar captura <span aria-hidden="true">↗</span></a
+                    >
+                  </figcaption>
+                </figure>
+              </article>
+              <article class="product-shot">
+                <div class="shot-heading">
+                  <h3>Clientes na mesma rotina de gestão</h3>
+                  <p>
+                    Consulte o cadastro de clientes em uma lista com busca e
+                    acesso aos registros. Os nomes e contatos apresentados são
+                    fictícios.
+                  </p>
+                </div>
+                <figure>
+                  <a
+                    class="capture-link"
+                    href="assets/img/product/customers-1600.webp"
+                    target="_blank"
+                    rel="noopener"
+                    aria-label="Ampliar captura: Cadastro de clientes do Dartalla One com seis empresas fictícias (abre em nova aba)"
+                  >
+                    <img
+                      src="assets/img/product/customers-960.webp"
+                      srcset="
+                        assets/img/product/customers-640.webp   640w,
+                        assets/img/product/customers-960.webp   960w,
+                        assets/img/product/customers-1600.webp 1600w
+                      "
+                      sizes="(min-width: 992px) 1100px, calc(100vw - 42px)"
+                      width="1600"
+                      height="1000"
+                      alt="Cadastro de clientes do Dartalla One com seis empresas fictícias"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </a>
+                  <figcaption>
+                    <span>Ambiente de demonstração — dados demonstrativos</span
+                    ><a
+                      class="text-link"
+                      href="assets/img/product/customers-1600.webp"
+                      target="_blank"
+                      rel="noopener"
+                      aria-label="Ampliar captura de clientes na mesma rotina de gestão (abre em nova aba)"
+                      >Ampliar captura <span aria-hidden="true">↗</span></a
+                    >
+                  </figcaption>
+                </figure>
+              </article>
+            </div>
+          </div>
         </div>
       </section>
-      <section id="beneficios" class="section">
+      <section id="beneficios" class="section decorative-section">
+        <img
+          class="benefits-design-shape decoration"
+          src="assets/img/why-use/why-use-shape.png"
+          width="496"
+          height="442"
+          alt=""
+          aria-hidden="true"
+          loading="lazy"
+        />
         <div class="container">
           <div class="row align-items-center g-5">
             <div class="col-lg-5">
@@ -421,7 +474,11 @@
           </div>
         </div>
       </section>
-      <section class="section gray-bg" aria-labelledby="audience-title">
+      <section
+        id="para-quem"
+        class="section gray-bg"
+        aria-labelledby="audience-title"
+      >
         <div class="container">
           <div class="section-title centered">
             <span class="eyebrow">Para quem</span>
@@ -461,7 +518,16 @@
           </div>
         </div>
       </section>
-      <section id="implantacao" class="section">
+      <section id="implantacao" class="section decorative-section">
+        <img
+          class="process-design-shape decoration"
+          src="assets/img/process/process-shape.png"
+          width="496"
+          height="443"
+          alt=""
+          aria-hidden="true"
+          loading="lazy"
+        />
         <div class="container">
           <div class="section-title centered">
             <span class="eyebrow">Como começar</span>
@@ -517,6 +583,14 @@
                   e conversar sobre sua operação.
                 </p>
               </div>
+              <img
+                class="faq-illustration"
+                src="assets/img/faq/faq-img.svg"
+                width="869"
+                height="776"
+                alt="Ilustração de atendimento e esclarecimento de dúvidas"
+                loading="lazy"
+              />
             </div>
             <div class="col-lg-7 faq-list">
               <details>
@@ -574,12 +648,37 @@
       <section id="contato" class="section contact-section">
         <div class="container">
           <div class="contact-panel">
+            <img
+              class="contact-design-shape decoration"
+              src="assets/img/shape/repeat-shape.svg"
+              width="163"
+              height="146"
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+            />
             <span class="eyebrow light">Vamos conversar</span>
             <h2>Conheça o Dartalla One<br />na prática.</h2>
             <p>
-              Conte o que sua empresa precisa. Vamos conversar sobre a
-              plataforma e sua rotina de gestão.
+              Traga os desafios da sua operação. Conheça os fluxos do produto e
+              avalie se fazem sentido para a sua empresa.
             </p>
+            <ul
+              class="demo-agenda"
+              aria-label="O que conversar na demonstração"
+            >
+              <li>
+                <span aria-hidden="true">01</span> Conhecer os fluxos de gestão
+              </li>
+              <li>
+                <span aria-hidden="true">02</span> Esclarecer dúvidas da sua
+                operação
+              </li>
+              <li>
+                <span aria-hidden="true">03</span> Alinhar escopo e próximos
+                passos
+              </li>
+            </ul>
             <a
               class="theme-btn"
               href="https://wa.me/5534998021945?text=Ol%C3%A1%2C%20quero%20solicitar%20uma%20demonstra%C3%A7%C3%A3o%20do%20Dartalla%20One%20para%20minha%20empresa."
@@ -592,14 +691,23 @@
               ><span aria-hidden="true">↗</span></a
             >
             <p class="contact-note">
-              Você será direcionado ao WhatsApp. A mensagem só será enviada
-              quando você confirmar no aplicativo.
+              Contato direto com a Dartalla pelo WhatsApp. Você pode editar a
+              mensagem antes de enviar.
             </p>
           </div>
         </div>
       </section>
     </main>
     <footer class="footer gray-bg">
+      <img
+        class="footer-design-shape decoration"
+        src="assets/img/shape/footer-bg.svg"
+        width="1920"
+        height="1273"
+        alt=""
+        aria-hidden="true"
+        loading="lazy"
+      />
       <div class="container">
         <div class="footer-top">
           <a href="#home" aria-label="Dartalla One — início"
