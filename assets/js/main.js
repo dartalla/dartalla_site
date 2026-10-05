@@ -1,6 +1,81 @@
-function fadeout(){var preloader=document.querySelector('.preloader');if(!preloader)return;preloader.style.opacity='0';preloader.style.display='none';}
-window.addEventListener('load',function(){window.setTimeout(fadeout,200);});
-window.addEventListener('DOMContentLoaded',function(){window.setTimeout(fadeout,1200);});
-function disableMobileWow(){document.querySelectorAll('.wow').forEach(function(el){el.classList.remove('wow');el.style.visibility='visible';el.style.animation='none';});}
-window.onscroll=function(){var header_navbar=document.querySelector(".navbar-area");var logo=document.querySelector('.navbar-brand img');if(header_navbar&&logo){var sticky=header_navbar.offsetTop;if(window.pageYOffset>sticky){header_navbar.classList.add("sticky");logo.src='assets/img/logo/logo-2.svg';}else{header_navbar.classList.remove("sticky");logo.src='assets/img/logo/logo.svg';}}var backToTo=document.querySelector(".scroll-top");if(backToTo){if(document.body.scrollTop>50||document.documentElement.scrollTop>50){backToTo.style.display="flex";}else{backToTo.style.display="none";}}};function onScroll(event){var sections=document.querySelectorAll('.page-scroll');var scrollPos=window.pageYOffset||document.documentElement.scrollTop||document.body.scrollTop;for(var i=0;i<sections.length;i++){var currLink=sections[i];var val=currLink.getAttribute('href');var refElement=document.querySelector(val);if(!refElement)continue;var scrollTopMinus=scrollPos+73;var firstLink=document.querySelector('.page-scroll.active')||document.querySelector('.page-scroll');if(refElement.offsetTop<=scrollTopMinus&&(refElement.offsetTop+refElement.offsetHeight>scrollTopMinus)){if(firstLink)firstLink.classList.remove('active');currLink.classList.add('active');}else{currLink.classList.remove('active');}}};window.document.addEventListener('scroll',onScroll);let navbarToggler=document.querySelector(".navbar-toggler");var navbarCollapse=document.querySelector(".navbar-collapse");document.querySelectorAll(".page-scroll").forEach(e=>e.addEventListener("click",()=>{if(navbarToggler)navbarToggler.classList.remove("active");if(navbarCollapse)navbarCollapse.classList.remove('show')}));if(navbarToggler){navbarToggler.addEventListener('click',function(){navbarToggler.classList.toggle("active");});}if(document.querySelector('.countup')){var cu=new counterUp({start:0,duration:2000,intvalues:true,interval:100,append:'K'});cu.start();}if(document.querySelector('.glightbox')){GLightbox({'href':'assets/video/video.mp4','type':'video','source':'local','width':900,'autoplayVideos':true,});}if(document.querySelector('.testimonial-active')){var slider=new tns({container:'.testimonial-active',items:2,slideBy:'page',autoplay:false,mouseDrag:true,gutter:0,nav:true,controls:false,responsive:{0:{items:1,},992:{items:2,}}});}var whatsappForm=document.querySelector('#whatsapp-form');if(whatsappForm){whatsappForm.addEventListener('submit',function(e){e.preventDefault();var contactField=document.querySelector('#subs-input');var contactValue=contactField&&contactField.value?contactField.value.trim():"";var message='Olá, quero conhecer o Dartalla One.';if(contactValue){message+=' Meu contato: '+contactValue+'.';}window.open('https://wa.me/5534998021945?text='+encodeURIComponent(message),'_blank','noopener');});}
-if(window.innerWidth<768){disableMobileWow();}else if(typeof WOW==='function'){new WOW().init();}
+(() => {
+  "use strict";
+
+  const header = document.querySelector(".navbar-area");
+  const logo = document.querySelector(".navbar-brand img");
+  const backToTop = document.querySelector(".scroll-top");
+  let scrollScheduled = false;
+
+  function updateScrollState() {
+    const scrolled = window.scrollY > 24;
+    header?.classList.toggle("sticky", scrolled);
+    if (logo) {
+      const source = scrolled
+        ? "assets/img/logo/logo-2.svg"
+        : "assets/img/logo/logo.svg";
+      if (logo.getAttribute("src") !== source) logo.setAttribute("src", source);
+    }
+    backToTop?.classList.toggle("visible", window.scrollY > 400);
+    scrollScheduled = false;
+  }
+
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (!scrollScheduled) {
+        scrollScheduled = true;
+        window.requestAnimationFrame(updateScrollState);
+      }
+    },
+    { passive: true },
+  );
+  updateScrollState();
+
+  if (!window.bootstrap?.Collapse)
+    document.documentElement.classList.remove("navigation-enhanced");
+
+  const navigation = document.querySelector("#navigation");
+  const toggler = document.querySelector(".navbar-toggler");
+  if (navigation && toggler && window.bootstrap?.Collapse) {
+    const menu = window.bootstrap.Collapse.getOrCreateInstance(navigation, {
+      toggle: false,
+    });
+    let closeAfterOpening = false;
+    navigation.addEventListener("shown.bs.collapse", () => {
+      if (closeAfterOpening) {
+        closeAfterOpening = false;
+        menu.hide();
+      }
+    });
+    navigation.addEventListener("hidden.bs.collapse", () => {
+      toggler.setAttribute("aria-expanded", "false");
+    });
+    navigation.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        if (navigation.classList.contains("collapsing"))
+          closeAfterOpening = true;
+        else menu.hide();
+      });
+    });
+    navigation.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        if (navigation.classList.contains("collapsing"))
+          closeAfterOpening = true;
+        else menu.hide();
+        toggler.focus();
+      }
+    });
+    document.documentElement.classList.add("navigation-enhanced");
+  }
+
+  // Local event hook only: no tracker, persistence, or personal data.
+  document.querySelectorAll("[data-cta]").forEach((link) => {
+    link.addEventListener("click", () => {
+      document.dispatchEvent(
+        new CustomEvent("dartalla:cta_click", {
+          detail: { placement: link.dataset.cta, intent: "request_demo" },
+        }),
+      );
+    });
+  });
+})();
