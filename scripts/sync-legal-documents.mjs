@@ -23,7 +23,7 @@ ${(section.links || []).map((link) => `          <p><a href="${escape(link.href)
         </section>`).join('\n');
   const summary = document.sections.map((section) => `          <li><a href="#${escape(section.id)}">${escape(section.title.replace(/^\d+\.\s*/, ''))}</a></li>`).join('\n');
   await writeFile(resolve(root, filename), `<!doctype html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="legal-document-page">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
