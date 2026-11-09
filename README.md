@@ -2,6 +2,31 @@
 
 Static product landing page. Serve the repository with any static HTTP server; there is no build step or backend API.
 
+## Dartalla One legal documents — 2026-11-09
+
+`termos.html` and `privacidade-sistema.html` cover the contracted platform, its
+workspaces, modules, integrations and content assistance. `privacidade.html`
+continues to describe the landing page and links to the system documents.
+All text and navigation work without JavaScript. Existing branding and locally
+served dependencies are reused; no trackers or new external assets were added.
+
+The approved application text is maintained in the sibling Core App repository,
+`src/sections/legal/legal-content.js`. Regenerate the two static documents with
+an explicit source path; generation is a maintenance action, not a Vercel build:
+
+```sh
+node scripts/sync-legal-documents.mjs /absolute/path/to/core_app/src/sections/legal/legal-content.js
+```
+
+Each generated HTML includes the source SHA-256 and document version. Before
+publishing, compare its complete text with the application and validate both
+pages, local assets, anchors and mobile layout. Publishing documents does not
+record contractual acceptance for existing users or enable provider permissions.
+
+Vercel project `enrica/dartalla-site` serves `dartalla.com.br` from
+`dartalla/dartalla_site`, production branch `main`; source identity was confirmed
+in the hosting panel as `51b1fd9fcf6252695ad77f278a2e2a8576c42cef` before this change.
+
 ## Implemented
 
 - Dartalla One positioning for PMEs; demonstration request via WhatsApp.
