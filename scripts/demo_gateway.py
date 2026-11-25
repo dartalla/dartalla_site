@@ -14,8 +14,8 @@ from urllib.error import HTTPError
 from urllib.parse import urlsplit
 from urllib.request import Request, urlopen
 
-BASE_DATE = date(2026, 10, 4)
-STAMP = '2026-10-04T12:00:00-03:00'
+BASE_DATE = date(2026, 11, 4)
+STAMP = '2026-11-04T12:00:00-03:00'
 USER_ID = 'usr_demo000000000001'
 WORKSPACE_ID = 'ws_demo000000000001'
 WORKSPACE = {
@@ -37,12 +37,12 @@ CATEGORIES = [
     {'id': 'cat_demo'+str(i).zfill(12), 'name': name, 'group': group,
      'icon': icon, 'color': color, 'workspace': WORKSPACE_ID, 'owner': USER_ID}
     for i, (name,group,icon,color) in enumerate([
-        ('Vendas','income','solar:shop-bold','#00A76F'),
-        ('Serviços','income','solar:case-round-bold','#00A76F'),
-        ('Fornecedores','expense','solar:box-bold','#8E33FF'),
-        ('Estrutura','expense','solar:buildings-2-bold','#00B8D9'),
-        ('Equipe','expense','solar:users-group-rounded-bold','#FFAB00'),
-        ('Marketing','expense','solar:chart-bold','#FF5630'),
+        ('Vendas','income','solar:shop-bold','#1E8E5A'),
+        ('Serviços','income','solar:case-round-bold','#1E8E5A'),
+        ('Fornecedores','expense','solar:box-bold','#136A9B'),
+        ('Estrutura','expense','solar:buildings-2-bold','#2BA89A'),
+        ('Equipe','expense','solar:users-group-rounded-bold','#D99A1B'),
+        ('Marketing','expense','solar:chart-bold','#C23B3B'),
     ],1)
 ]
 ACCOUNT = {'id':'acc_demo000000000001','name':'Conta da empresa','type':'checking',
@@ -63,8 +63,8 @@ for i,(description,amount,kind,category,day,realized) in enumerate([
     TRANSACTIONS.append({'id':'tr_demo'+str(i).zfill(12),'description':description,
        'amount':amount,'type':kind,'category':CATEGORIES[category],'account':ACCOUNT,
        'workspace':WORKSPACE_ID,'owner':USER_ID,'status':'realized' if realized else 'pending',
-       'due_date':f'2026-10-{day:02d}', 'realized_at':f'2026-10-{day:02d}T12:00:00-03:00' if realized else None,
-       'paid_at':f'2026-10-{day:02d}T12:00:00-03:00' if realized else None,'created_at':STAMP,'currency':'BRL','is_recurring':False,'is_fixed':False,
+       'due_date':f'2026-11-{day:02d}', 'realized_at':f'2026-11-{day:02d}T12:00:00-03:00' if realized else None,
+       'paid_at':f'2026-11-{day:02d}T12:00:00-03:00' if realized else None,'created_at':STAMP,'currency':'BRL','is_recurring':False,'is_fixed':False,
        'is_active':True,'is_owner':True,'credit_card_invoice':None,'destination_account':None})
 CUSTOMERS = [{'id':'cust_demo'+str(i).zfill(12),'first_name':name,'last_name':'',
     'full_name':name,'email':f'contato{i}@empresa.example','phone':None,'tax_number':None,
@@ -113,6 +113,7 @@ class DemoGateway(BaseHTTPRequestHandler):
         if path=='/transaction/':return self.page(TRANSACTIONS)
         if path=='/account/':return self.page([ACCOUNT])
         if path=='/card/':return []
+        if path=='/credit-card-invoice/':return []
         if path=='/category/':return self.page(CATEGORIES)
         if path=='/customer/':return self.page(CUSTOMERS)
         if path=='/fiscal/nfe/':return DOCUMENTS
@@ -123,7 +124,7 @@ class DemoGateway(BaseHTTPRequestHandler):
             'pending_expenses_cents':420000,'card_invoices_cents':0,'goals_reserved_cents':0,
             'minimum_reserve_cents':0,'available_to_spend_cents':3200000,
             'pending_incomes_cents':980000,'projected_balance_cents':4180000,
-            'as_of':'2026-10-04','through':'2026-10-15','next_income_date':'2026-10-15','window_fallback':False}
+            'as_of':'2026-11-04','through':'2026-11-15','next_income_date':'2026-11-15','window_fallback':False}
         if path=='/expenses-by-category/':return [{'category':c['name'],'amount':a,'icon':c['icon']}
             for c,a in zip(CATEGORIES[2:],[980000,350000,180000,120000])]
         if path=='/category-commitments/':return [{'category':c['name'],'committed_cents':a+p,
@@ -133,9 +134,9 @@ class DemoGateway(BaseHTTPRequestHandler):
             days=[]
             for n in range(31):
                 d=BASE_DATE+timedelta(days=n)
-                conservative=3620000-(240000 if d>=date(2026,10,8) else 0)-(180000 if d>=date(2026,10,10) else 0)
+                conservative=3620000-(240000 if d>=date(2026,11,8) else 0)-(180000 if d>=date(2026,11,10) else 0)
                 days.append({'date':d.isoformat(),'conservative_balance_cents':conservative,
-                    'projected_balance_cents':conservative+(980000 if d>=date(2026,10,15) else 0)})
+                    'projected_balance_cents':conservative+(980000 if d>=date(2026,11,15) else 0)})
             return {'account_count':1,'as_of':BASE_DATE.isoformat(),'through':days[-1]['date'],
                 'first_negative_date':None,'minimum_balance_cents':3200000,'days':days,'drivers':[]}
         if path=='/organization-pending/':return {'kind':'uncategorized','groups':[
@@ -145,6 +146,7 @@ class DemoGateway(BaseHTTPRequestHandler):
             'results':[],'count':0,'page':1,'next_number':None,'previous_number':None}
         if path=='/credit-card-invoice-funnel/':return {'statuses':[],'due_buckets':[]}
         if path=='/budget-overview/':return {'planning':None,'totals':{'budget_amount':0,'spent_amount':1630000,'variance_amount':0,'remaining_budget':0},'categories':[]}
+        if path=='/planning/guide/':return {'steps':[],'complete':True,'dismissed':False}
         if path=='/burn-rate/':return {'categories':[],'series':[]}
         if path.startswith('/notifications') or path.startswith('/notification'):
             return {'results':[],'count':0,'unread_count':0,'next':None,'previous':None}

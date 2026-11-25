@@ -1,21 +1,21 @@
 {
   "customers.jpg": {
-    "sha256": "7108681fdc99b521431a51af42d4f682f144bbcf92385f7888b28ec48a61829c",
+    "sha256": "321d4dc9d9f096db7807e888010a8ade1f11299d3548773e3d05592300b02f98",
     "width": 1600,
     "height": 1000
   },
   "fiscal.jpg": {
-    "sha256": "793e77c1d36b3b40a2b60fc65fa7b62759126488c59a2f105d5ffb163c62dd81",
+    "sha256": "d7ea5ae473d7816a0d00d0b2ad0c8f386621d57bc531584038ecc3e7dd6fc8db",
     "width": 1600,
     "height": 1000
   },
   "overview.jpg": {
-    "sha256": "ca479af81cd78f057a31268197add2ee472d74cd05d31c10b49a47469e47f18f",
+    "sha256": "2084e837ff7b3e88e61c9f8339e47b51d339d3cf4989e717113886f6beca223a",
     "width": 1600,
     "height": 1000
   },
   "transactions.jpg": {
-    "sha256": "0bea44ae2c10ab9eea0e0e15b91b21bf13517ed6ae071ad5662d8710bc9731ad",
+    "sha256": "68d666ffbda62d6893b9fb545eaf5ec61577623dcd3e7075006a92ac26bbdea1",
     "width": 1600,
     "height": 1000
   }

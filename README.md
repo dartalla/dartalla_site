@@ -29,8 +29,8 @@ in the hosting panel as `51b1fd9fcf6252695ad77f278a2e2a8576c42cef` before this c
 
 ## Implemented
 
-- Dartalla One positioning for PMEs; demonstration request via WhatsApp.
-- Bootstrap 5.3.8 (Collapse only, 12 KB JavaScript), local Nunito, accessible native FAQ, progressive mobile navigation.
+- Dartalla company site: positioning for MEIs, autonomous professionals and small businesses, with Dartalla One (https://dartalla.app) presented as the product; contact via WhatsApp.
+- Bootstrap 5.3.8 (Collapse only, 12 KB JavaScript), local Inter and Inter Tight, accessible native FAQ, progressive mobile navigation.
 - Removed template screenshots, inert editorial links, pseudo testimonials and video.
 - Local `dartalla:cta_click` event dispatched on `document` with `{ placement, intent: 'request_demo' }`. Placements: `header`, `hero`, `contact`, `floating`. No persistence, tracker, personal data or automatic WhatsApp submission.
 - Informational privacy page describing this site's behavior.
@@ -48,7 +48,7 @@ in the hosting panel as `51b1fd9fcf6252695ad77f278a2e2a8576c42cef` before this c
 ## Dependencies
 
 Bootstrap: https://getbootstrap.com/ (MIT, copyright retained in distributed assets).
-Nunito: https://github.com/googlefonts/nunito (SIL Open Font License; see assets/fonts/OFL.txt).
+Inter: https://github.com/rsms/inter and Inter Tight: https://github.com/rsms/inter-tight (SIL Open Font License; see assets/fonts/OFL-Inter.txt and assets/fonts/OFL-InterTight.txt).
 
 ## CSS optimization
 
@@ -58,7 +58,7 @@ Bootstrap CSS is the 5.3.8 distribution reduced to this page's selectors. When a
 npx --yes purgecss@7.0.2 --css assets/css/bootstrap.min.css --content index.html privacidade.html assets/js/main.js --safelist show collapsing --output assets/css
 ```
 
-Always preserve the license header and recheck collapse transitions. Do not purge an already reduced file when introducing new components. Nunito uses a local Latin variable WOFF2 covering weights 400–800.
+Always preserve the license header and recheck collapse transitions. Do not purge an already reduced file when introducing new components. Inter (400–700) and Inter Tight (400–800) use local Latin variable WOFF2 files.
 
 ## Validation — 2026-10-04
 

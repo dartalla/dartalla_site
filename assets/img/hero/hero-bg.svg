@@ -1,8 +1,8 @@
 <svg height="916.487" viewBox="0 0 1922.044 916.487" width="1922.044" xmlns="http://www.w3.org/2000/svg"
      xmlns:xlink="http://www.w3.org/1999/xlink">
     <linearGradient id="a" gradientUnits="objectBoundingBox" x1=".08" x2=".942" y1=".196" y2=".763">
-        <stop offset="0" stop-color="#7B30E4"/>
-        <stop offset="1" stop-color="#BC81F6"/>
+        <stop offset="0" stop-color="#136A9B"/>
+        <stop offset="1" stop-color="#1A78AC"/>
     </linearGradient>
     <clipPath id="b">
         <path d="m4710 12099.888s171.96 168.747 225.359 208.8c8.537 5.836 20.109 4.4 23.038 4.4h1673.647v-916.33h-1922.044z"

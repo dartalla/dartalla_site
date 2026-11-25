@@ -1,6 +1,7 @@
 # Dartalla Site
 
-- Preserve Dartalla's existing logo, purple gradients and Nunito typography.
+- Brand: Lago (white-first, blue `#136A9B`, teal companion `#2BA89A`), Inter Tight headings and Inter text, and the Dartalla One logo (symbol, "Dartalla", "One" badge). Source of truth is the Dartalla One design system artifact; do not reintroduce violet or the old logo.
+- This is the Dartalla company site, not the product site. The product, Dartalla One, lives at https://dartalla.app and appears here as one section.
 - This is a static HTML/CSS/JavaScript site. Do not migrate frameworks without a request.
 - Product claims require confirmed capabilities and evidence. Never invent customer quotes, metrics, guarantees, certifications or commercial terms.
 - Product screenshots must show the actual Dartalla One with safe demonstration data. Never publish template screens or mock interfaces as product evidence; alt text and captions must match the image.

@@ -27,21 +27,23 @@ ${(section.links || []).map((link) => `          <p><a href="${escape(link.href)
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#7530df" />
+    <meta name="theme-color" content="#136a9b" />
     <title>${escape(document.title)} | Dartalla One</title>
     <meta name="description" content="${escape(document.description)}" />
     <link rel="canonical" href="https://dartalla.com.br/${filename}" />
-    <link rel="icon" href="assets/img/favicon.ico" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="assets/img/favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
     <link rel="stylesheet" href="assets/css/bootstrap.min.css?v=5.3.8.1" />
-    <link rel="stylesheet" href="assets/css/main.css?v=20261005.9" />
-    <link rel="stylesheet" href="assets/css/legal-documents.css?v=20261109.1" />
+    <link rel="stylesheet" href="assets/css/main.css?v=20261125.1" />
+    <link rel="stylesheet" href="assets/css/legal-documents.css?v=20261125.1" />
   </head>
   <body>
     <!-- Conteúdo do Core App v${escape(document.version)}; SHA-256 ${sourceHash}. Não editar o texto neste arquivo gerado. -->
     <a class="skip-link" href="#main">Pular para o conteúdo</a>
     <header class="legal-header">
       <div class="container">
-        <a href="index.html" aria-label="Dartalla One — início"><img src="assets/img/logo/logo.svg" width="172" height="43" alt="Dartalla" /></a>
+        <a href="index.html" aria-label="Dartalla — início"><img src="assets/img/logo/logo.svg" width="172" height="43" alt="Dartalla" /></a>
         <nav aria-label="Documentos legais">
           <a href="termos.html"${key === 'terms' ? ' aria-current="page"' : ''}>Termos de Uso</a>
           <a href="privacidade-sistema.html"${key === 'privacy' ? ' aria-current="page"' : ''}>Política de Privacidade</a>

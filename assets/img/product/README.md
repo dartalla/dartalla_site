@@ -1,4 +1,6 @@
-# Product screenshots — 2026-10-04
+# Product screenshots — 2026-11-25 (Lago rebrand)
+
+Recaptured on 2026-11-25 from `core_app` `main` (commit `c5472b0`, Lago brand) at 1600×1000 through `scripts/demo_gateway.py` (fixtures dated 2026-11-04, browser clock fixed to that day). Routes: `/`, `/transaction`, `/customer`, `/fiscal/nfe`. The fixtures gained `/planning/guide/` and `/credit-card-invoice/` and Lago category colors. The notes below describe the original 2026-10-04 capture and the method, which is unchanged.
 
 These are captures of the actual Dartalla One React interface, not a reconstructed or generated UI. Synthetic API fixtures supply the displayed business records. No customer database was seeded or changed, and no real session was copied.
 
