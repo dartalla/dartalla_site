@@ -52,7 +52,6 @@ ${(section.links || []).map((link) => `          <p><a href="${escape(link.href)
     </header>
     <main id="main" class="container legal-document" tabindex="-1">
       <div id="inicio" class="legal-document-intro">
-        <p class="eyebrow">Dartalla One</p>
         <h1>${escape(document.title)}</h1>
         <p>${escape(document.description)}</p>
         <p class="legal-document-version">Versão ${escape(document.version)} · Atualizado em ${escape(document.updatedAt)}</p>
